@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en-gb">
+
+<head>
+	<title>Wasm</title>
+	<script type="module">
+
+		import { unsignedLEB128 } from './encodings.js';
+
+		const tinyModule = [0x00, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00];
+		const script = Uint8Array.from(tinyModule);
+		const instance = await WebAssembly.instantiate(script);
+	</script>
+</head>
+
+<body>
+
+</body>
